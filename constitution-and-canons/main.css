@@ -1,0 +1,616 @@
+/* --------------------------------------------------
+  GENERAL STYLES
+-------------------------------------------------- */
+html {
+  font-size: 200%;
+}
+
+body {
+  background-color: red;
+  line-height: 1.4;
+  box-sizing: border-box;
+  font-variant-ligatures: common-ligatures;
+  font-size: 1rem;
+}
+
+body,
+td,
+th {
+  font-family: Merriweather, serif;
+  color: #000000;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  page-break-before: always;
+  display: block;
+}
+
+article {
+  display: block;
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+h1+p,
+h2+p,
+h3+p {
+  page-break-before: avoid;
+}
+
+h1 {
+  /* font-size: 18pt; */
+  font-size: 1.5rem;
+  padding-bottom: 12pt;
+}
+
+h2 {
+  /* font-size: 14pt; */
+  font-size: 1.2rem;
+  padding-top: 12pt;
+  padding-bottom: 10pt;
+}
+
+h3 {
+  /* font-size: 11pt; */
+  font-size: .9rem;
+  padding-top: 12pt;
+  padding-bottom: 6pt;
+}
+
+h4 {
+  padding-top: 6pt;
+}
+
+h4,
+h5,
+h6 {
+  /* font-size: 10pt; */
+  font-size: .8rem;
+}
+
+p,
+li {
+  /* font-size: 9pt; */
+  font-size: .75rem;
+  margin-bottom: 8pt;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+p.sec-num {
+  margin-bottom: 3pt;
+}
+
+li>ol {
+  margin-top:4pt;
+}
+
+li>p {
+  margin-top:4pt;
+}
+
+small {
+  /* font-size: 8pt; */
+  font-size: .65em
+
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  /* font-size: 7.5pt; */
+  font-size: .62rem;
+}
+
+.col-number {
+  width: 7%;
+  line-height: 1.3;
+}
+
+.col-res-title {
+  width: 68%;
+  line-height: 1.3;
+}
+
+.col-article {
+  width: 25%;
+  line-height: 1.3;
+}
+
+table.small-table {
+	width:50%;
+}
+
+h2.index-header {
+	margin-top: 12pt;
+	margin-bottom: 8pt;
+	/* font-size: 12pt; */
+    font-size: 1rem;
+}
+
+tr.table-header-row {
+  padding: 6pt 2pt;
+  border-top: none;
+  border-bottom: .5pt solid #63666A;
+}
+
+table tr {
+  border-top: 0.4pt solid #C0C1C4;
+  padding: 0 6pt 0 0;
+}
+
+table tr:last-of-type {
+  border-bottom: 0.4pt solid #C0C1C4;
+}
+
+table td {
+  padding: 3pt 4pt 3pt 0;
+  vertical-align: top;
+}
+
+table th {
+  text-align: left;
+}
+
+section.title,
+section.intro,
+section.copyright {
+  text-align: center;
+  page-break-before: always;
+  position: relative;
+}
+
+section.title {
+  top: 3.7in;
+}
+
+section.intro {
+  top: 1.5in;
+}
+
+section.copyright {
+  top: 6in;
+}
+
+section.blank-page {
+  page-break-before: always;
+}
+
+section.intro h3,
+section.intro h4 {
+  font-weight: normal;
+}
+
+section.intro h4 {
+  line-height: 1.4;
+}
+
+section.title img,
+section.intro img {
+  width: 2in;
+  padding: 0.5in;
+}
+
+section.contents h1 {
+  padding-bottom: 0;
+}
+
+section.contents h2 {
+  padding-top: 14pt;
+}
+
+section.contents h3 {
+  padding-top: 10pt;
+}
+
+section.contents li {
+  padding-top: 2pt;
+}
+
+/*ol.index-header {
+    display: none;
+}*/
+
+div.revision_date {
+    display: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.revision-date {
+	text-align: center;
+}
+
+/* --------------------------------------------------
+  UTILITIES
+-------------------------------------------------- */
+
+.page-break-before {
+  page-break-before: always;
+}
+
+
+/* --------------------------------------------------
+  LISTS
+-------------------------------------------------- */
+
+ol {
+  /* margin-left: 1.5rem; */
+  margin-top: 4pt;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ol ol {
+  padding-left: -.25pt;
+}
+
+li {
+  padding-left: 0;
+}
+
+.contents ol {
+  padding-left: 2rem;
+}
+
+.contents ol.no-numbering {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.contents ol li {
+  margin-bottom: 3pt;
+}
+
+ol.index-header {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.no-numbering,
+.sec-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ol.decimal {
+  list-style-type: decimal;
+}
+
+ol.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+ol.lower-alpha-bold {
+  list-style-type: lower-alpha;
+}
+
+ol.lower-roman {
+  list-style-type: lower-roman;
+}
+
+ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+ol.upper-roman {
+  list-style-type: upper-roman;
+}
+ol.upper-roman li::marker {
+  /* font-size: 9pt; */
+  font-size: .75rem;
+}
+
+ol.lower-alpha-bold > li::marker {
+  font-weight: bold;
+}
+
+ol.decimal-bold > li::marker {
+  font-weight: bold;
+}
+
+ol.lower-alpha>li span.number,
+ol.upper-alpha>li span.number,
+ol.lower-roman>li span.number,
+ol.upper-roman>li span.number,
+ol.decimal>li span.number {
+  position: absolute;
+  left: -1cm;
+  top: 0;
+  display: block;
+  width: 1cm;
+  font-weight: normal;
+}
+
+ol.sec-list>li p span.number {
+  /* display: inline-block; */
+  font-weight: bold;
+}
+
+
+
+/* --------------------------------------------------
+   HANDWRITING UNDERLINES
+-------------------------------------------------- */
+
+.handwriting {
+  border-bottom: 0.5pt solid black;
+  display: inline-block;
+  width: 1.5in;
+}
+
+.short {
+  width: 0.8in;
+}
+
+table.handwriting-line {
+  width: 100%;
+  margin: 9pt 0;
+  /* font-size: 9pt; */
+  font-size: .75rem;
+  table-layout: auto;
+}
+
+table.handwriting-line tr {
+  border: none;
+}
+
+table.handwriting-line th {
+  text-align: left;
+  width: 0%;
+  border: none;
+}
+
+table.handwriting-line td {
+  width: 100%;
+  border: none;
+  border-bottom: 0.5pt solid black;
+}
+
+
+/* --------------------------------------------------
+  INDEX
+-------------------------------------------------- */
+
+.index header {
+  /* font-size: 14pt; */
+  font-size: 1.1rem;
+  text-align: center;
+  page-break-after: avoid;
+}
+
+.index article {
+  padding-bottom: 0.15in;
+}
+
+.index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.index ul ul {
+  padding: 0 0 0 0.5cm;
+  font-weight: normal;
+}
+
+.index>ul {
+  padding-left: 0;
+}
+
+.index ul li {
+  margin: 0;
+  padding: 1pt 0;
+  width: 100%;
+  clear: both;
+  display: block;
+  /* font-size: 8pt; */
+  font-size: .65rem;
+  line-height: 1.2;
+}
+
+.index ul li:not(.no-reference)::after {
+  content: leader(dotted);
+  font-weight: normal;
+}
+
+.index ul li small,
+.index ul li span.reference {
+  font-weight: normal;
+}
+
+.index ul li span.reference {
+  float: right;
+}
+
+/* --------------------------------------------------
+  HEADERS & TRANSLATIONS
+-------------------------------------------------- */
+
+body {
+  string-set: tr_gc "La Convención General", tr_constitution "Constitución", tr_contents "Índice", tr_canon "Canon", tr_canons "Cánones", tr_rules "Reglas de Orden", tr_section "Sección", tr_index "Índices", tr_resolutions_amending "Resoluciones que Enmiendan la Constitución, los Cánones y las Reglas de Orden";
+}
+
+section.constitution h2[title] {
+  string-set: headertextconstitution attr(title);
+}
+
+section.canons h2[title] {
+  string-set: headertextcanontitle attr(title);
+}
+
+section.canons h3 {
+  string-set: headertextcanonrange content();
+}
+
+section.canons li[data-section] {
+  string-set: headertextcanonnumber attr(data-section);
+}
+
+section.rules_of_order h2[title] {
+  string-set: headertextrulessubsection attr(title);
+}
+
+section.rules_of_order h3[data-section] {
+  string-set: headertextrulesrange attr(data-section);
+}
+
+
+
+
+
+/* --------------------------------------------------
+  SCREEN ONLY STYLES
+-------------------------------------------------- */
+
+@media screen {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: #FFFFFF;
+  }
+  ol {
+    margin-left: 1.5rem;
+  }
+  .constitution dfn,
+  .canons dfn,
+  .rules_of_order dfn {
+    display: none;
+    margin: 1em 0;
+  }
+  section {
+    margin: 1.5rem 0 !important;
+    padding: 3rem !important;
+    border: 2px solid #C4C4C4;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+    display: block;
+    clear: both;
+    position: relative;
+    background: white !important;
+  }
+  section.title,
+  section.intro,
+  section.copyright {
+    padding-top: 0;
+    top: 0;
+  }
+  section.blank-page {
+    display: none;
+  }
+  .title,
+  .intro,
+  .copyright {
+    padding-top: 0;
+  }
+  a {
+    color: darkblue;
+  }
+  a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-device-width: 950px) {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    background: #f8f8f8 !important;
+    font-size: 100%;
+    float: left;
+    line-height: 1.5;
+    margin: 0 0 0 30%;
+    padding: 0 1rem;
+    width: 70%;
+  }
+  ol.upper-roman li::marker {
+    font-size: unset;
+  }
+  section.contents {
+    position: fixed;
+    margin: 0 !important;
+    padding: 1rem !important;
+    background: white;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    overflow-y: auto;
+    border: none;
+    box-shadow: none !important;
+  }
+  section.contents h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  section.contents nav:last-of-type {
+    margin-bottom: 2rem;
+  }
+  section.contents a {
+    color: #0055b9;
+  }
+  section.contents a:hover {
+    color: #0055b9;
+  }
+
+  ol.sec-list>li p span.number {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .constitution,
+  .canons,
+  .rules_of_order {
+    padding-right: 13rem !important;
+  }
+
+  /* --------------------------------------------------
+    SIDEBAR TEXT
+  -------------------------------------------------- */
+
+  .constitution dfn,
+  .canons dfn,
+  .rules_of_order dfn {
+    display: unset;
+    position: absolute;
+    right: 0.5in;
+	line-height: 1.2;
+    /* margin-bottom: unset; */
+    margin-top: 0.06cm;
+    width: 1.3in;
+    font-size: 8pt;
+  }
+
+
+}
